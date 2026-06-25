@@ -21,8 +21,7 @@ export default async function BlogDetailPage({ params }: { params: Promise<{ slu
         {/* Header Section */}
         <header className="mb-16">
           <div className="flex gap-2 mb-8 justify-center flex-wrap">
-            {post.tags.map((tag, index) => (
-              <span 
+{post.tags.map((tag: { id: string; name: string }, index: number) => (              <span 
                 key={tag.id} 
                 className={`${
                   index % 2 === 0 ? "bg-[#A0AF8E]" : "bg-[#929292]"
